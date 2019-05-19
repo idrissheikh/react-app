@@ -1,0 +1,41 @@
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.card {
+  display: inline-block;
+  margin: 5px;
+  width: 18rem;
+}
+.card-title {
+  flex-wrap: wrap;
+  word-wrap: break-word;
+  white-space: wrap;
+  overflow-x: hidden;
+  color: red;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.form-continaer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding-right: 10px;
+  margin-left: 10px;
+  padding-left: 10px;
+}
+
+div[disabled] {
+  pointer-events: none;
+  opacity: 0.7;
+}
