@@ -5,7 +5,9 @@ import API from "../../services/api";
 import { getOrderHistory } from "../../store/action/actions";
 
 class OrderHistory extends Component {
-  componentWillMount() {}
+  componentWillMount() {
+    this.props.getOrderHistory(this.props.user.id);
+  }
 
   renderProductList = products => {
     return Object.keys(products).map((product, key) => {
@@ -20,6 +22,8 @@ class OrderHistory extends Component {
   }
 
   render() {
+    console.log("props.orderHistory: ", this.props.orderHistory);
+
     return (
       <div>
         <div className="col-sm-10 mx-auto my-3">

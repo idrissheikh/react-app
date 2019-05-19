@@ -104,7 +104,7 @@ export default class API {
   }
 
   static getshippingById(id) {
-    let url = "http://157.230.90.57:9998/shipping/" + id;
+    let url = "http://46.101.224.218:9998/shipping/" + id;
     return new Promise((resolve, reject) => {
       fetch(url)
         .then(res => res.json())
@@ -114,7 +114,7 @@ export default class API {
   }
 
   static postShipping(shipping) {
-    let url = "http://157.230.90.57:9998/shipping";
+    let url = "http://46.101.224.218:9998/shipping";
     return new Promise((resolve, reject) => {
       fetch(url, {
         method: "POST", // or 'PUT'
@@ -131,7 +131,7 @@ export default class API {
 
   static updateShipping(shippingId, userId, shipping) {
     let url =
-      "http://157.230.90.57:9998/updateShipping/id=" +
+      "http://46.101.224.218:9998/updateShipping/id=" +
       shippingId +
       "&user_id=" +
       userId;
@@ -150,7 +150,7 @@ export default class API {
   }
 
   static putShipping(shipping) {
-    let url = "http://157.230.90.57:9998/shipping/" + shipping.id;
+    let url = "http://46.101.224.218:9998/shipping/" + shipping.id;
     return new Promise((resolve, reject) => {
       fetch(url, {
         method: "PUT", // or 'PUT'
@@ -177,7 +177,7 @@ export default class API {
 
   static postOrder(body) {
     return new Promise((resolve, reject) => {
-      let url = "http://157.230.90.57:7070/orders";
+      let url = "http://46.101.224.218:7070/orders";
       fetch(url, {
         method: "POST", // or 'PUT'
         body: JSON.stringify(body), // data can be `string` or {object}!
@@ -193,7 +193,7 @@ export default class API {
 
   static getOrderHistoryByUser(userId) {
     console.log("recieved id: " + userId);
-    let url = `http://157.230.90.57:7070/orderHistory/user/${userId}`;
+    let url = `http://46.101.224.218:7070/orderHistory/user/${userId}`;
     return new Promise((resolve, reject) => {
       fetch(url)
         .then(res => res.json())
@@ -303,7 +303,7 @@ export default class API {
   }
 
   static getShippings() {
-    let url = "http://157.230.90.57:9998/shipping/";
+    let url = "http://46.101.224.218:9998/shipping/";
     return new Promise((resolve, reject) => {
       fetch(url)
         .then(res => res.json())
